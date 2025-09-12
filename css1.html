@@ -35,6 +35,7 @@
 </main>
 
 
+
 <section>
 
     <h1>Proyectos</h1>
@@ -60,10 +61,41 @@
     </article>
 
 </section>
-
+    <!-- Modal básico -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¡Bienvenido!</h2>
+            <p>Este es un mensaje importante que aparece al cargar la página.</p>
+            <button onclick="closeModal()">Entendido</button>
+        </div>
+    </div>
 <footer>
 <h1>Contacto</h1>
 </footer>
 
+
+<script>
+        // Obtener el modal
+        var modal = document.getElementById("myModal");
+        var closeBtn = document.getElementsByClassName("close")[0];
+
+        // Función para cerrar el modal
+        function closeModal() {
+            modal.style.display = "none";
+        }
+
+        // Cerrar modal al hacer clic en la X
+        closeBtn.onclick = function() {
+            closeModal();
+        }
+
+        // Cerrar modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
