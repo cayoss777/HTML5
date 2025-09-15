@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba css</title>
+  
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="nombre.css">
+  <link rel="stylesheet" href="gradiente.css">
+  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+<style>
+  :root{
+    --bg: #062030;
+    --text: #f3eded;
+    --accent: #0e052e;     /* color al hacer hover */
+    --accent-contrast: #fff;
+    --border: #080808;     /* color de los bordes entre items */
+    --radius: 18px;
+  }
+
+  /* Reset mínimo */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+ 
+
+  /* Contenedor del nav */
+  .nav {
+    display: flex;
+    justify-content: center; /* centra horizontalmente la barra */
+  }
+
+  /* Lista horizontal */
+  .nav__list {
+    display: flex;
+    gap: 0; /* usaremos bordes entre items en lugar de gap */
+    background: blue;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(230, 222, 222, 0.03);
+  }
+
+  /* Cada item visualmente separado por un borde vertical */
+  .nav__item {
+    list-style: none;
+    border-left: 1px solid var(--border); /* borde entre items */
+  }
+
+  /* Evitar borde en el primer item */
+  .nav__item:first-child {
+    border-left: none;
+  }
+
+  /* Enlace estilo botón */
+  .nav__link {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: background-color 180ms ease, color 180ms ease, transform 120ms ease;
+    user-select: none;
+  }
+
+  /* Hover / focus (accesible) */
+  .nav__link:hover,
+  .nav__link:focus {
+    background: var(--accent);
+    color: var(--accent-contrast);
+    outline: none;
+    transform: translateY(-2px);
+  }
+
+  /* Indicar foco con teclado */
+  .nav__link:focus-visible {
+    box-shadow: 0 0 0 3px rgba(14,165,164,.15);
+    border-radius: 6px;
+  }
+
+  /* Responsive: en pantallas muy pequeñas apilar verticalmente */
+  @media (max-width: 520px) {
+    .nav__list {
+      flex-direction: column;
+      width: 100%;
+      max-width: 360px;
+    }
+    .nav__item {
+      border-left: none;
+      border-top: 1px solid var(--border);
+    }
+    .nav__item:first-child {
+      border-top: none;
+    }
+    .nav__link {
+      padding: 14px 18px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="stage">
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+  <div class="layer"></div>
+</div>
+
+<nav class="nav">
+  <ul class="nav__list">
+    <li class="nav__item"><a class="nav__link" href="index.html">Inicio</a></li>
+    <li class="nav__item"><a class="nav__link" href="css3.html">CSS 3</a></li>
+    <li class="nav__item"><a class="nav__link" href="css2.html">CSS3</a></li>
+    <li class="nav__item"><a class="nav__link" href="css1.html">CSS</a></li>
+  </ul>
+</nav>
+
+</header>
+
+<div class="gradient-examples">
+<h1 class="vibrate-3">Sobre mi</h1>
+<div class="vibrate-3 example linear ">
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati eligendi saepe natus distinctio in ipsum, dolorem suscipit ex quasi?</p>
+  </div>
+</div>
+<br>
+
+<div class="gradient-examples">
+  <h1 class="rotate-scale-up">Proyectos</h1> 
+  <div class="rotate-scale-up example radial ">
+    Radial Gradient
+  </div>
+</div>
+<br>
+
+<div class="gradient-examples">
+
+  <div class="example conic ">
+  
+    Conic Gradient
+  </div>
+
+</div>
+
+
+<footer>
+<h1>Contacto</h1>
+
+
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+     alt="WhatsApp" width="40">
+
+     <a href="https://wa.me/51983744950" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i> 
+</a>
+
+
+<i class="fa-brands fa-github"></i>
+
+
+<a href="https://github.com/" target="_blank">
+  <i class="fa-brands fa-github"></i>
+</a>
+
+</footer>
+
+
+
+<style>
+  * *, *::before, *::after { 
+    animation-play-state: running !important;
+  }
+</style>
+<script>window.setTimeout = null;</script>
+
+</body>
+</html>
