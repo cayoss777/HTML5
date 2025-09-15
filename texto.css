@@ -116,7 +116,8 @@
 
 /* Efecto hover */
 .nav-links a:hover {
-  background: var(--verde-claro);
+  /*background: var(--verde-claro);*/
+  background-color: #e65100;
   transform: translateY(-2px);
 }
 
