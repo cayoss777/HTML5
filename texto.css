@@ -1,0 +1,184 @@
+    body{
+                background: #223001; 
+        color: rgba(255,255,255,.25);
+    }
+    header {
+      /*background-color: #2c3e50;*/
+ 
+       font: 400 1em/1.5 "Neuton"; 
+        background: #090d00; 
+        color: rgba(255,255,255,.25);
+        border-radius: 30px; 
+    }
+.nombre {
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	display: inline-block;
+	border: 8px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	position: relative;
+	top: 8%;
+	left: 50%;
+	width: 40em;
+	margin: 0 0 0 -20em;
+    text-align: center;
+  
+  span {
+
+  	font: 700 4em/1 "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	  display: block;
+	  margin: 0 auto;
+  	text-shadow: 0 0 80px rgba(255,255,255,.5);
+
+/* Clip Background Image */
+
+	  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+	  -webkit-background-clip: text;
+	  background-clip: text;
+
+/* Animate Background Image */
+
+	  -webkit-text-fill-color: transparent;
+	  -webkit-animation: aitf 80s linear infinite;
+
+/* Activate hardware acceleration for smoother animations */
+
+	  -webkit-transform: translate3d(0,0,0);
+	  -webkit-backface-visibility: hidden;
+
+  }
+}
+
+/* Animate Background Image */
+
+@-webkit-keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+/*menu*/
+
+
+
+
+
+
+/* Colores principales */
+:root {
+  --verde-oscuro: #1b5e20;
+  --verde-claro: #4caf50;
+  --blanco: #ffffff;
+}
+
+/* Navbar general */
+.navbar {
+  /*background-color: var(--verde-oscuro);*/
+  
+  background: linear-gradient(135deg, #e65100, #2e7d32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+}
+
+/* Logo */
+.logo {
+  color: var(--blanco);
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* Lista de enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+  text-decoration: none;
+  color: var(--blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Efecto hover */
+.nav-links a:hover {
+  background: var(--verde-claro);
+  transform: translateY(-2px);
+}
+
+/* Responsive: en móviles el menú se apila */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+}
+
+
+
+
+
+/*Grid */
+
+.parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh; /* para que ocupe la pantalla */
+}
+
+.div1 { 
+  grid-area: 1 / 1 / 4 / 2; 
+  /*background: linear-gradient(135deg, #e65100, #2e7d32); /* naranja oscuro → verde */
+  background: linear-gradient(135deg, #e65100, #2e7d32);
+  border-radius: 15px;
+}
+
+.div2 { 
+  grid-area: 1 / 2 / 4 / 4; 
+  /*background: linear-gradient(135deg, #2196f3, #81c784); /* azul → verde claro */
+  background: linear-gradient(135deg, #e65100, #2e7d32);
+
+  border-radius: 15px;
+}
+
+.div3 { 
+  grid-area: 1 / 4 / 4 / 5; 
+/*  background: linear-gradient(135deg, #6a1b9a, #ff9800); /* morado → naranja */
+background: linear-gradient(135deg, #e65100, #2e7d32);
+
+  border-radius: 15px;
+}
+
+
+
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+
+p{
+    color: #ffffff;
+}
