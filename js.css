@@ -1,0 +1,38 @@
+    /* Contenedor principal */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+
+            /* Contenido principal */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: rgb(223, 148, 148);
+        }
+
+
+
+    /* Sidebar */
+    .sidebar {
+      width: 200px;
+      background: #2bc4df;
+      color: white;
+      height: 100vh; /* ocupa toda la altura de la ventana */
+      padding: 20px;
+      position: relative ; /* fixed se queda fija al hacer scroll */
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 10px 0;
+      padding: 8px;
+      border-radius: 5px;
+    }
+
+    .sidebar a:hover {
+      background: #2c3e50;
+    }

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba css</title>
+  <link rel="stylesheet" href="estilo1.css">
+  <link rel="stylesheet" href="js.css">
+
+</head>
+<body>
+
+  
+
+<header>
+  
+    <h1>Nombre</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Maquetación</a></li>
+            <li><a href="css2.html">CSS3</a></li>
+            <li><a href="css1.html">CSS</a></li>
+            <li><a href="javascript.html">JavaScript</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<div class="container">
+    <div class="sidebar">
+      <h2>Menú</h2>
+      <a href="index.html">Inicio</a>
+      <a onclick="mostrar('soy')">Quien soy</a>
+      <a onclick="mostrar('css')">CSS3</a>
+      <!--<a href="#">JavaScript</a>-->
+      <a onclick="mostrar('javascript')">JavaScript</a>
+    </div>
+
+    
+    <div id="contenidojs">
+      <h2>Bienvenido</h2>
+      <p>Selecciona un tema del menú lateral.</p>
+    </div>    
+</div>   
+
+<footer>
+<h1>Contacto</h1>
+</footer>
+
+
+
+ <script>
+    // Contenido de cada sección
+    const secciones = {
+        soy: `
+        <h2>Soy</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati eligendi saepe natus distinctio in ipsum, dolorem suscipit ex quasi?</p>
+      `,
+      css: `
+        <h2>Curso de CSS</h2>
+        <p>CSS se usa para dar estilo a los documentos HTML.</p>
+        <pre><code>h1 { color: blue; }</code></pre>
+      `,
+      javascript: `
+        <h2>Curso de JavaScript</h2>
+        <p>JavaScript da interactividad a las páginas web.</p>
+        <button onclick="alert('Hola desde JavaScript!')">Probar</button>
+      `
+    };
+
+    // Función para mostrar el contenido dinámico
+    function mostrar(seccion) {
+      document.getElementById("contenidojs").innerHTML = secciones[seccion];
+    }
+  </script>
+</body>
+</html>
