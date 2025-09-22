@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba css</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    
+    /* Estructura principal */
+    header, main, section, footer {
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* Encabezado y navegación */
+    header {
+      background-color: #2c3e50;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h1 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    nav li {
+      margin: 5px 10px;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+    
+    nav a:hover {
+      background-color: #34495e;
+    }
+    
+    /* Secciones principales */
+    #sobremi {
+      background-color: #ecf0f1;
+      padding: 25px;
+      border-radius: 8px;
+    }
+    
+    section {
+      margin: 20px 0;
+    }
+    
+    section > h1 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+    
+    /* Artículos/proyectos */
+    section > article {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    /* Pie de página */
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 30px;
+      margin-top: 30px;
+    }
+    
+    /* Media Queries para Responsive */
+    
+    /* Tabletas */
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      nav ul {
+        justify-content: flex-end;
+      }
+      
+      section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+    
+    /* Escritorios */
+    @media (min-width: 1024px) {
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      section {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+      }
+    }
+    
+    /* Móviles pequeños */
+    @media (max-width: 480px) {
+      header {
+        padding: 15px;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav li {
+        margin: 5px 0;
+      }
+      
+      #sobremi, section > article {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+    <h1>Nombre</h1>
+    <nav>
+        <ul>
+
+
+            <li><a href="index.html">Maquetación</a></li>
+            <li><a href="css3responsive.html">CSS 3</a></li>
+            <li><a href="css2responsive.html">CSS3</a></li>
+            <li><a href="css1responsive.html">CSS</a></li>
+            <li><a href="javascriptresponsive.html">JavaScript</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="sobremi">
+        <h1>Sobre mi</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati eligendi saepe natus distinctio in ipsum, dolorem suscipit ex quasi?</p>
+        <p>Ea veniam amet eveniet quos necessitatibus esse totam. Tenetur, aut. Repudiandae, deserunt! Laborum omnis ut vel repellat animi ipsum!</p>
+    </section>
+
+    <section>
+        <h1>Proyectos</h1>
+        <article>
+            <p>Lorem, ipsum.</p>
+            <p>Beatae, minus.</p>
+        </article>
+        <article>
+            <p>Lorem, ipsum.</p>
+            <p>Labore, quidem!</p>
+        </article>
+        <article>
+            <p>Lorem, ipsum.</p>
+            <p>Eius, recusandae.</p>
+        </article>
+        <article>
+            <p>Lorem, ipsum.</p>
+            <p>Esse, maiores?</p>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <h1>Contacto</h1>
+</footer>
+
+</body>
+</html>

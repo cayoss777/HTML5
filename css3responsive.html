@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prueba css</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background: #223001; 
+      color: rgba(255,255,255,.25);
+      margin: 0;
+      padding: 0 15px;
+    }
+    
+    .contacto {
+      text-align: center;
+      padding: 10px 0;
+    }
+    
+    .contacto p {
+      color: white;
+      margin: 0;
+    }
+    
+    .contacto a {
+      color: white;
+      margin-left: 15px;
+      font-size: 1.2rem;
+    }
+    
+    header {
+      font: 400 1em/1.5 "Neuton"; 
+      background: #090d00; 
+      color: rgba(255,255,255,.25);
+      border-radius: 30px;
+      margin: 15px 0;
+      padding: 20px 0;
+    }
+    
+    .nombre {
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      display: inline-block;
+      border: 8px double rgba(255,255,255,.25);
+      border-width: 4px 0;
+      padding: 1.5em 0em;
+      position: relative;
+      width: 90%;
+      max-width: 40em;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .nombre span {
+      font: 700 4em/1 "Oswald", sans-serif;
+      letter-spacing: 0;
+      padding: .25em 0 .325em;
+      display: block;
+      margin: 0 auto;
+      text-shadow: 0 0 80px rgba(255,255,255,.5);
+      background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: aitf 80s linear infinite;
+      -webkit-transform: translate3d(0,0,0);
+      -webkit-backface-visibility: hidden;
+    }
+    
+    @-webkit-keyframes aitf {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+    
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(135deg, #e65100, #2e7d32);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-radius: 15px;
+      margin: 15px 0;
+    }
+    
+    .logo {
+      color: white;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .nav-links li {
+      margin: 0;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    
+    .nav-links a:hover {
+      background-color: #e65100;
+      transform: translateY(-2px);
+    }
+    
+    /* Grid */
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+      min-height: 70vh;
+      margin-bottom: 30px;
+    }
+    
+    .div1 { 
+      grid-area: 1 / 1 / 4 / 2; 
+      background: linear-gradient(135deg, #e65100, #2e7d32);
+      border-radius: 15px;
+      padding: 20px;
+    }
+    
+    .div2 { 
+      grid-area: 1 / 2 / 4 / 4; 
+      background: linear-gradient(135deg, #e65100, #2e7d32);
+      border-radius: 15px;
+      padding: 20px;
+    }
+    
+    .div3 { 
+      grid-area: 1 / 4 / 4 / 5; 
+      background: linear-gradient(135deg, #e65100, #2e7d32);
+      border-radius: 15px;
+      padding: 20px;
+    }
+    
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+    
+    p {
+      color: #ffffff;
+    }
+    
+    /* Media Queries para Responsive */
+    
+    /* Tabletas */
+    @media (max-width: 1024px) {
+      .parent {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+      }
+      
+      .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      
+      .div2 {
+        grid-area: 1 / 2 / 2 / 3;
+      }
+      
+      .div3 {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      
+      .nombre span {
+        font-size: 3em;
+      }
+    }
+    
+    /* Tabletas pequeñas */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      
+      .logo {
+        margin-bottom: 15px;
+      }
+      
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.8rem;
+      }
+      
+      .nav-links a {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+      }
+      
+      .nombre span {
+        font-size: 2.5em;
+      }
+    }
+    
+    /* Móviles */
+    @media (max-width: 600px) {
+      .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      
+      .div1 {
+        grid-area: 1 / 1 / 2 / 2;
+      }
+      
+      .div2 {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      
+      .div3 {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      
+      .nombre {
+        padding: 1em 0;
+        width: 95%;
+      }
+      
+      .nombre span {
+        font-size: 2em;
+      }
+      
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+      }
+      
+      .nav-links li {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.8rem;
+      }
+      
+      .contacto p {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      
+      .contacto a {
+        margin-left: 0;
+      }
+    }
+    
+    /* Móviles muy pequeños */
+    @media (max-width: 400px) {
+      .nombre span {
+        font-size: 1.7em;
+      }
+      
+      .logo {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="contacto">
+    <p>📧 contacto@ejemplo.com | 📞 +51 993 744 950
+      <a href="https://wa.me/51983744950" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> 
+      </a>
+      <a href="https://github.com/" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </p>
+  </div>
+  
+  <nav class="navbar">
+    <div class="logo">Portafolio</div>
+    <ul class="nav-links">
+
+            <li><a href="index.html">Maquetación</a></li>
+            <li><a href="css3responsive.html">CSS 3</a></li>
+            <li><a href="css2responsive.html">CSS3</a></li>
+            <li><a href="css1responsive.html">CSS</a></li>
+            <li><a href="javascriptresponsive.html">JavaScript</a></li>
+    </ul>
+  </nav>
+  
+  <header>
+    <p class="nombre">
+      <span>Claudio Isaias Huancahuire Bravo</span>
+    </p>
+  </header>
+  
+  <div class="parent">
+    <div class="div1"> 
+      <h1>Proyecto 1</h1>
+      <section></section>
+      <article>
+        <p>Lorem, ipsum.</p>
+        <p>Beatae, minus.</p>
+      </article>
+      <article>
+        <p>Lorem, ipsum.</p>
+        <p>Labore, quidem!</p>
+      </article>
+    </div>
+    
+    <div class="div2"> 
+      <h1>Sobre mi</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati eligendi saepe natus distinctio in ipsum, dolorem suscipit ex quasi?</p>
+      <p>Ea veniam amet eveniet quos necessitatibus esse totam. Tenetur, aut. Repudiandae, deserunt! Laborum omnis ut vel repellat animi ipsum!</p>
+    </div>
+    
+    <div class="div3"> 
+      <h1>Proyecto 2</h1>
+      <article>
+        <p>Lorem, ipsum.</p>
+        <p>Beatae, minus.</p>
+      </article>
+      <article>
+        <p>Lorem, ipsum.</p>
+        <p>Labore, quidem!</p>
+      </article>
+    </div>
+  </div>
+</body>
+</html>
