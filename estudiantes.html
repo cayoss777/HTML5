@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docentes - Cards</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @keyframes fly {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+            100% { transform: translateY(0); }
+        }
+        .animate-fly {
+            animation: fly 3s ease-in-out infinite;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px -5px rgba(34, 211, 238, 0.4);
+        }
+
+
+
+
+                .bg-with-image {
+            background-image: 
+                linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(55, 65, 81, 0.90) 50%, rgba(75, 85, 99, 0.85) 100%),
+                /*url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2832&q=80');*/
+
+                url("./docentes/img/fondo22.jpg");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+    </style>
+</head>
+<body class="bg-with-image">
+
+ <header class="absolute inset-x-0 top-0 z-50">
+    <nav aria-label="Global" class="flex items-center justify-between p-6 lg:px-8">
+      <div class="flex lg:flex-1">
+        <a href="#" class="-m-1.5 p-1.5">
+          <span class="sr-only">Antabamba</span>
+          <img src="./img/logo-.png" alt="Mi Logo" class="h-12 w-auto">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-200">
+          <span class="sr-only">Abrir main menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+            <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a href="index.html" class="text-sm/6 font-semibold text-white">Inicio</a>
+        <a href="estudiantes4.html" class="text-sm/6 font-semibold text-white">Docentes</a>
+        <a href="estudiantes.html" class="text-sm/6 font-semibold text-white">Estudiantes</a>
+        <a href="admin3.html" class="text-sm/6 font-semibold text-white">Administrativos</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="#" class="text-sm/6 font-semibold text-white">Log in <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <el-dialog>
+      <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+        <div tabindex="0" class="fixed inset-0 focus:outline-none">
+          <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">Mi colegio-Your Company</span>
+                <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+              </a>
+              <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-200">
+                <span class="sr-only">Cerrar Close menu</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                  <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-white/10">
+                <div class="space-y-2 py-6">
+                  <a href="index.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Inicio</a>
+                  <a href="estudiantes4.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Docente</a>
+                  <a href="estudiantes.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Estudiante</a>
+                  <a href="admin3.html" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Administrativos</a>
+                </div>
+                <div class="py-6">
+                  <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-white hover:bg-white/5">Log in</a>
+                </div>
+              </div>
+            </div>
+          </el-dialog-panel>
+        </div>
+      </dialog>
+    </el-dialog>
+  </header>
+
+  <div class="py-16 sm:py-24 mt-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      
+      <!-- Título -->
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Estudiantes</h2>
+        <p class="mt-4 text-lg text-gray-400">
+          Al tener una cantidad moderada de docentes para la cantidad de estudiantes, es posible que los profesores conozcan bien a sus alumnos, lo que facilitaría una atención más personalizada.
+        </p>
+      </div>
+
+      <!-- Lista de docentes en cards -->
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        
+        <!-- Card 1 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/cayo.png" alt="Profesor Claudio" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Claudio</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Matemática y Física</p>
+            <p class="text-gray-400 mt-3 text-sm">Especialista en matemáticas avanzadas y física aplicada con más de 10 años de experiencia.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Álgebra</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Cálculo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/cayos.jpg" alt="Profesor Isaias" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Isaias</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Lengua y Literatura</p>
+            <p class="text-gray-400 mt-3 text-sm">Apasionado por la literatura clásica y contemporánea. Fomenta el amor por la lectura.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Gramática</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Literatura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/claudio.jpg" alt="Profesor Huancahuire" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Huancahuire</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Inglés</p>
+            <p class="text-gray-400 mt-3 text-sm">Enseña inglés con métodos interactivos y modernos. Nativo con certificación internacional.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Conversación</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">TOEFL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/clau.jpg" alt="Profesor Bravo" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Bravo</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Programación</p>
+            <p class="text-gray-400 mt-3 text-sm">Desarrollador full-stack con experiencia en la industria. Enseña lenguajes modernos de programación.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Web</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Apps</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>
