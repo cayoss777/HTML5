@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="es" class="transition duration-500">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Claudio Huancahuire | Data Warehouse</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docentes - Cards</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+    
 <style>
   .bg-with-image {
     background-image:
@@ -170,9 +171,10 @@
 </style>
 
 </head>
-<body class="bg-with-image min-h-screen">
+<body class="bg-with-image">
 
-  <!-- NAVBAR CON MENÚ RESPONSIVE COMPLETO -->
+
+    <!-- NAVBAR CON MENÚ RESPONSIVE COMPLETO -->
   <header class="fixed inset-x-0 top-0 z-50 bg-black/20 backdrop-blur-sm transition-all duration-500">
     <nav class="flex items-center justify-between p-4 lg:px-12">
       
@@ -237,47 +239,92 @@
     </div>
   </header>
 
-  <!-- HERO CON TEXTO ANIMADO -->
-  <section class="min-h-screen flex items-center px-6 sm:px-8 lg:px-20 pt-24">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center w-full">
-
-      <!-- TEXTO -->
-      <div>
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight text-center lg:text-left">
-          Hola,<br>
-          soy <span class="text-indigo-200">Claudio</span>
-          <span class="text-orange-400">Huancahuire.</span>
-        </h1>
-        <p class="mt-6 text-xl sm:text-2xl md:text-3xl font-semibold text-white text-center lg:text-left">
-          Me gusta <span id="typed" class="font-bold text-orange-400"></span>
+  <div class="py-16 sm:py-24 mt-16">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      
+      <!-- Título -->
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Estudiantes</h2>
+        <p class="mt-4 text-lg text-gray-400">
+          Al tener una cantidad moderada de docentes para la cantidad de estudiantes, es posible que los profesores conozcan bien a sus alumnos, lo que facilitaría una atención más personalizada.
         </p>
-
-        <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-          <a href="#"
-            class="rounded-full bg-indigo-600 px-6 py-3 text-white font-semibold shadow-lg hover:bg-indigo-500 transition-all duration-300 hover:scale-105 text-center">
-            Acerca de mí ↓
-          </a>
-          <a href="#"
-            class="rounded-full border border-white/30 px-6 py-3 text-white hover:bg-white/10 transition-all duration-300 hover:scale-105 text-center">
-            Proyectos
-          </a>
-        </div>
       </div>
 
-      <!-- FOTO -->
-      <div class="flex justify-center lg:justify-end">
-        <div class="relative">
-          <div class="absolute inset-0 rounded-full bg-white/20 blur-2xl scale-110 animate-pulse"></div>
-          <img src="img/cayosss.jpg"
-            alt="Claudio"
-            class="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-8 border-white/30 shadow-2xl mx-auto transition-all duration-500 hover:scale-105">
+      <!-- Lista de docentes en cards -->
+      <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        
+        <!-- Card 1 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/cayo.png" alt="Profesor Claudio" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Claudio</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Matemática y Física</p>
+            <p class="text-gray-400 mt-3 text-sm">Especialista en matemáticas avanzadas y física aplicada con más de 10 años de experiencia.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Álgebra</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Cálculo</span>
+            </div>
+          </div>
         </div>
-      </div>
 
+        <!-- Card 2 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/cayos.jpg" alt="Profesor Isaias" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Isaias</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Lengua y Literatura</p>
+            <p class="text-gray-400 mt-3 text-sm">Apasionado por la literatura clásica y contemporánea. Fomenta el amor por la lectura.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Gramática</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Literatura</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/claudio.jpg" alt="Profesor Huancahuire" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Huancahuire</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Inglés</p>
+            <p class="text-gray-400 mt-3 text-sm">Enseña inglés con métodos interactivos y modernos. Nativo con certificación internacional.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Conversación</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">TOEFL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-gray-800 rounded-xl overflow-hidden card-hover border border-cyan-500/20">
+          <div class="p-6 flex flex-col items-center text-center">
+            <div class="mb-4 rounded-full p-1 shadow-[0_0_15px_#22d3ee]">
+              <img src="./docentes/img/clau.jpg" alt="Profesor Bravo" class="w-32 h-32 rounded-full object-cover">
+            </div>
+            <h3 class="text-xl font-bold text-white animate-fly">Bravo</h3>
+            <p class="text-indigo-400 font-semibold mt-1 animate-float">Programación</p>
+            <p class="text-gray-400 mt-3 text-sm">Desarrollador full-stack con experiencia en la industria. Enseña lenguajes modernos de programación.</p>
+            <div class="mt-4 flex space-x-3">
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Web</span>
+              <span class="bg-cyan-900 text-cyan-300 text-xs px-2 py-1 rounded-full">Apps</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </section>
+  </div>
 
-  <script>
+
+
+
+    <script>
     // ==================== THEME TOGGLE MEJORADO ====================
     const themeSwitch = document.getElementById("theme-switch");
     const html = document.documentElement;
@@ -572,6 +619,6 @@
       document.body.style.overflow = "";
     };
   </script>
-
+    
 </body>
 </html>
