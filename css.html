@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        .caja {
+      margin: 20px;              /* espacio externo */
+      
+border-top: 2px solid red;
+border-right: 3px dashed blue;
+border-bottom: 4px double green;
+border-left: 5px dotted purple;
+
+      padding: 100px;             /* espacio interno */
+      background-color: rgb(121, 112, 112);
+    }
+
+
+  
+  .contenedor {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 200px;
+      background: lightgray;
+    }
+    .item {
+      background: lightblue;
+      padding: 20px;
+      border: 2px solid blue;
+    }
+
+
+</style>
+</head>
+<body>
+    
+  <div class="caja">
+    Contenido
+  </div>
+
+  <div class="contenedor">
+    <div class="item">Caja 1</div>
+    <div class="item">Caja 2</div>
+    <div class="item">Caja 3</div>
+  </div>
+
+
+</body>
+</html>
